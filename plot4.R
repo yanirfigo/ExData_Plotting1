@@ -10,6 +10,7 @@ pc<-read.table("household_power_consumption.txt",sep = ";",na.strings = "?",head
 
 ##converting the dates and time to dates and time format
 library(lubridate)
+library(dplyr)
 pc$Date<- dmy(pc$Date)
 pc$Time<-hms(pc$Time)
 
